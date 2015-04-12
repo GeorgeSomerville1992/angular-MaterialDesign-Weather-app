@@ -1,0 +1,207 @@
+
+$nav: #FFFFFF;
+$primary-font-color:#D5425D;
+$main-background-color:#54BED7;
+$front-tile-palette:#00CDCD;
+$back-tile-palette:#D5425D;
+@media screen and (max-width: 560px) {
+	.weather-summary{
+		display:block;
+		color:yellow;
+	}
+}
+@media screen and (max-width: 900px) {
+	.weather-summary{
+		display:none;
+		color:red;
+	}
+}
+#weather-nav{
+	background-color: $nav;
+	h1{
+		color:$primary-font-color;
+	}
+}
+#geocode-postcode-button{
+	background-color: #D5425D;
+}
+
+/*weather tabs styling */
+
+.nav-heading{
+	font-size: 1.250em;
+  font-weight: 400;
+  /*text-align: center;*/
+  margin:auto;
+}
+.md-toolbar-tools{
+	margin-bottom: 30px;
+}
+.weather-header{
+	font-size: 1.250em;
+  font-weight: 400;
+  /*text-align: center;*/
+  margin:auto;
+}
+
+#content{
+	padding:0px;
+	background-color:$main-background-color;
+}
+
+.weather-content{
+	color:white;
+	font-weight: 500;
+	text-align: center;
+	.weather-footer{
+		text-align: center;
+	}
+	.front-tile-information{
+		width:100%;
+		height:100%;
+		background-color: $front-tile-palette;
+	}
+	.back-tile-information{
+		width:100%;
+		height:100%;
+		background-color: $back-tile-palette;
+	}
+	.upper-content-container{
+		p{
+			font-size: 30px
+		}
+	}
+	.weather-icon{
+		height:64px;
+		width:64px;
+		margin-top:30px;
+	}
+	.weather-summary{
+		position:relative;
+		bottom:20px;
+	}
+	.general-weather-summary{
+		
+	}
+}
+
+.demo-tab{
+	color:white;
+	height:100%;
+	.avg-Temp p{
+		font-size:50px;
+		text-align: right;
+		margin-right:100px;
+	}
+
+	.summary-components{
+		text-align: right;
+		position: relative;
+		bottom:300px;
+		right:100px;
+	}
+}
+
+.weather-tab-container{
+	text-align: center;
+	margin-right: 20px
+}
+.tab1,.tab4, .tab6 { 
+	background-color: #673AB7;
+}
+.tab2,.tab5,.tab8{
+	background-color: #00796B;
+}
+.tab3,.tab7{
+	background-color: #3F51B5;
+}
+.weather-tab-container{
+
+}
+.md-icon-name{
+	background-image: url(../images/user.png)
+}
+.md-icon-postcode{
+	background-image: url(../images/postcode.png)
+}
+.md-icon-hamburger{
+	background-image: url(../images/menu.svg)
+}
+.main-summary-container{
+	h2{
+		text-align: center;
+	}
+}
+
+/*.weather-icon{
+	margin-left:80px;
+	position: relative;
+	bottom:50px;
+	height:256px;
+	width:256px;
+
+}*/
+
+
+
+
+
+
+
+.gridListdemoDynamicTiles md-icon {
+  width: 50%;
+  height: 50%; }
+.gridListdemoDynamicTiles md-icon svg {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+.gridListdemoDynamicTiles .s64 {
+  font-size: 64px; }
+.gridListdemoDynamicTiles .s32 {
+  font-size: 48px; }
+.gridListdemoDynamicTiles md-icon.fa {
+  display: block;
+  padding-left: 0px; }
+.gridListdemoDynamicTiles md-icon.s32 span {
+  padding-left: 8px; }
+.gridListdemoDynamicTiles md-grid-list {
+  margin: 8px; }
+.gridListdemoDynamicTiles .gray {
+  background: #f5f5f5; }
+.gridListdemoDynamicTiles .green {
+  background: #b9f6ca; }
+.gridListdemoDynamicTiles .yellow {
+  background: #ffff8d; }
+.gridListdemoDynamicTiles .blue {
+  background: #84ffff; }
+.gridListdemoDynamicTiles .darkBlue {
+  background: #80d8ff; }
+.gridListdemoDynamicTiles .deepBlue {
+  background: #448aff; }
+.gridListdemoDynamicTiles .purple {
+  background: #b388ff; }
+.gridListdemoDynamicTiles .lightPurple {
+  background: #8c9eff; }
+.gridListdemoDynamicTiles .red {
+  background: #ff8a80; }
+.gridListdemoDynamicTiles .pink {
+  background: #ff80ab; }
+.gridListdemoDynamicTiles md-grid-tile {
+  transition: all 300ms ease-out 50ms; }
+.gridListdemoDynamicTiles md-grid-tile md-icon {
+  padding-bottom: 32px; }
+.gridListdemoDynamicTiles md-grid-tile md-grid-tile-footer {
+  background: rgba(0, 0, 0, 0.68);
+  height: 36px; }
+.gridListdemoDynamicTiles md-grid-tile-footer figcaption {
+  width: 100%; }
+.gridListdemoDynamicTiles md-grid-tile-footer figcaption h3 {
+  margin: 0px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center; }
+
+
+
+
+

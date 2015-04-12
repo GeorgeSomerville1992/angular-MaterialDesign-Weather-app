@@ -1,0 +1,81 @@
+
+<!-- container 2 -->
+  <!-- Container #3 -->
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left"class="md-whiteframe-z2">
+	<md-item-content>
+  	<div class="md-tile-content">
+		<form name="reviewform" class="weather-postcode-form" ng-submit="submitRequest(location)"> 
+			<div class="form-group">
+				<md-input-container md-no-float>
+    			<md-icon class="md-icon-name"></md-icon>
+    			<input ng-model="name" type="text"  placeholder="name">
+  			</md-input-container>
+				<md-input-container md-no-float>
+    			<md-icon class="md-icon-postcode"></md-icon>
+    			<input ng-model="postCode" type="text" placeholder="Postcode">
+  			</md-input-container>
+  			<md-input-container md-no-float>
+    			<md-button class="md-raised">Submit</md-button>
+      		<md-button class="md-raised"id="geocode-postcode-button"ng-click="getLocation()">Geocode mylocation</md-button>
+      	</md-input-container>
+      </div>	
+			<!-- <input type="text" ng-model="city" placeholder="chooseCity" id="geocodeCity"></input> -->
+    </form>
+    <hr>
+    </div>
+	</md-item-content>
+  <!-- <md-divider md-inset ng-if="!$last"></md-divider> -->
+  <md-list>
+  	<md-item ng-repeat="profile in savedLocations">
+	    <md-item-content>
+				<div layout="column"class="md-tile-content">
+					<h3>{{profile.name}}</h3>
+
+		      <h4>{{profile.postCode}}</h4>
+	    	</div>
+	  	</md-item-content>
+	  </md-item>	
+	</md-list>
+</md-sidenav>
+
+      <!-- Container #4 -->
+<md-content flex id="content">
+  <md-grid-list
+          md-cols-sm="1" md-cols-md="2" md-cols-gt-md="4" md-rows-gt-md="3"
+          md-row-height-gt-md="1:1" md-row-height="4:3"
+          md-gutter="8px" md-gutter-gt-sm="4px" class="weather-content">      
+      <md-grid-tile ng-model="clicked"ng-repeat="weather in currentWeather"
+                        md-rowspan="{{weather.span.row}}"
+                        md-colspan="{{weather.span.col}}">                                                                 
+        <div class="front-tile-information nga-default nga-stagger nga-rotate-left" id="frontTile" flex ng-hide="frontTile" ng-click="show=true;frontTile=true">
+          <div flex="100">
+            <h3 class="general-weather-summary"ng-show="weather.weatherSummary">{{weather.weatherSummary}}</h3> 
+          </div>
+
+          <div layout="column">
+            <div layout="row" class="upper-content-container">
+              <div flex="50">
+                <img style="height:64px;width64px;"class="weather-icon" src="../images/{{weather.icon}}.png"/>
+              </div>
+              <p flex="50" ng-show="weather.temperatureMax">{{weather.temperatureMax}} F </p>
+            </div>
+          </div>
+          <p flex="100" class="weather-summary">{{weather.summary}}</p>
+          <md-grid-tile-footer><h3 class="weather-footer">{{weather.weekday}}</h3><h3 ng-show="weather.weatherSummary">Summary</h3>
+          </md-grid-tile-footer>
+        </div> 
+        <div class="back-tile-information nga-default nga-stagger nga-rotate-right" ng-show="show" ng-click="frontTile=false;show=false">
+          <div flex="column" class="back-coloumn-summary">
+            <p> Cloud Cover: {{weather.cloudCover}} %</p>
+            <p>WindSpeed: {{weather.windSpeed}}</p>
+            <p>WindBearing: {{weather.windBearing}}</p>
+          </div>
+
+
+
+          <md-grid-tile-footer><h3 class="weather-footer">{{weather.weekday}}</h3><h3 ng-show="weather.weatherSummary">Summary</h3></md-grid-tile-footer>
+        </div>
+        <!-- <img class="weather-icon" src="../images/{{weather.icon}}.png"/> -->
+      </md-grid-tile>
+  </md-grid-list>
+</md-content>
